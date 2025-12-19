@@ -63,7 +63,7 @@ a {
 }
 /*footer*/
 footer {
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("media/Bairo\ Alto.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("media/Bairo\ Alto.jpeg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -85,6 +85,7 @@ footer {
 .footer-text{
   margin-top: 10px;
   margin-bottom: 0;
+  opacity: 0.8;
 }
 @media (max-width: 900px) {
 header {
