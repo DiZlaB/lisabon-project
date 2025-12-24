@@ -1,5 +1,9 @@
+/* =====================
+   ROOT & GLOBAL
+===================== */
+
 :root {
---first-font-color: #FFFFFF;
+  --first-font-color: #ffffff;
 }
 
 body {
@@ -7,47 +11,11 @@ body {
   font-family: Poppins;
 }
 
-/*header*/
-header{
-  background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.5)), url("media/bg.png");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  text-align: center;
-  padding: 16px 8px; 
-  color: var(--first-font-color);
-  width: auto;
-  min-height: 60vh;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-header h1 {
-font-weight: 700;
-font-size: 96px;
-line-height: 100%;
-margin: 0%;
-}
-
-header h3 {
-font-weight: 400;
-font-style: Regular;
-font-size: 40px;
-line-height: 100%;
-}
-
-header h5 {
-opacity: 1;
-gap: 10px;
-padding-top: 16px;
-padding-right: 32px;
-padding-bottom: 16px;
-padding-left: 32px;
-
-}
 .button {
   background-color: var(--first-font-color);
   color: black;
@@ -57,42 +25,78 @@ padding-left: 32px;
   font-size: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
- 
 }
-a {
-  text-decoration: none;
-  color: #FFFFFF;
+
+
+/*    HEADER  */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
+    url("media/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 16px 8px;
+  color: var(--first-font-color);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-/*main*/
-.container{ 
- margin: 50px 100px;
+
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 100%;
+  margin: 0;
+}
+
+header h3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+header h5 {
+  opacity: 1;
+  padding: 16px 32px;
+}
+
+
+/* =====================
+   MAIN – GLOBAL
+===================== */
+
+.container {
+  margin: 50px 100px;
 }
 
 main h3 {
-font-weight: 400;
-font-style: Regular;
-font-size: 16px;
-letter-spacing: 5px;
-color: darkgray;
-margin: 0%;
-
- }
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: darkgray;
+  margin: 0;
+}
 
 main h2 {
-font-weight: 700;
-font-style: Bold;
-font-size: 30px;
-line-height: 50px;
-margin-top: 0;
- }
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 50px;
+  margin-top: 0;
+}
+
 main p {
-font-family: Poppins;
-font-weight: 400;
-font-style: Regular;
-font-size: 13px;
+  font-weight: 400;
+  font-size: 13px;
 }
 
 
+/* =====================
+   SECTION 1
+===================== */
 
 .section-1 {
   display: grid;
@@ -100,23 +104,38 @@ font-size: 13px;
   padding: 16px 8px;
   gap: 64px;
   margin: 50px;
- }
- .section-1-img {
- width: 100%;
- height:500px;
- 
- }
+}
 
-.section-2 , .section-3 {
+.section-1-img {
+  width: 100%;
+  height: 500px;
+}
+
+
+/* =====================
+   SECTION 2 + 3 (shared)
+===================== */
+
+.section-2,
+.section-3 {
   text-align: center;
   padding: 10px;
-  gap: 64px;
   margin: 50px;
 }
+
 .row-2 {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+
+/* =====================
+   SECTION 2 – CARDS
+===================== */
+
+.section-2 .row-2 {
+  align-items: stretch;
 }
 
 .section-2 .row-2 > div {
@@ -128,15 +147,7 @@ font-size: 13px;
   justify-content: space-between;
 }
 
-.section-2 .row-2 {
-  align-items: stretch;
-}
-.section-2 .location-info {
-  margin-top: auto;
-  align-self: center;
-  margin-bottom: 16px;
-}
-
+/* media (image + map) */
 .section-2 .media-row {
   display: flex;
   gap: 10px;
@@ -154,22 +165,14 @@ font-size: 13px;
   object-fit: cover;
 }
 
-.section-2 img {
-  width: 100px;
-  height: 180px ;
-}
-.section-2 iframe {
-width: 180px;
-height: 180px;
+/* text & address */
+.section-2 p {
+  margin-bottom: 8px;
 }
 
 .section-2 .address-block {
   margin-top: auto;
   padding-top: 20px;
-}
-
-.section-2 p {
-  margin-bottom: 8px;
 }
 
 .section-2 .address-block h5 {
@@ -181,115 +184,137 @@ height: 180px;
   margin-top: 0;
 }
 
+/* button */
 .location-info {
   background-color: black;
-  color: #FFFFFF;
-  margin-top: 20px;
+  color: #ffffff;
 }
+
+.section-2 .location-info {
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 16px;
+}
+
+
+/* =====================
+   SECTION 3 – GALLERY
+===================== */
 
 .gallery-pics {
   width: 300px;
   height: 210px;
+  border-radius: 5px;
 }
 
-/*footer*/
+
+/* =====================
+   FOOTER
+===================== */
+
 footer {
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("media/Bairo\ Alto.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("media/Bairo Alto.jpeg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   min-height: 40vh;
-  z-index: 1;
   color: var(--first-font-color);
 }
+
 .footer-main-row {
   display: grid;
-  grid-template-rows: 1fr ;
   grid-template-columns: 2fr 4fr 4fr;
   grid-gap: 16px;
-  padding: 16px; 
- }
+  padding: 16px;
+}
+
 .footer-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.footer-text{
+
+.footer-text {
   margin-top: 10px;
   margin-bottom: 0;
   opacity: 0.8;
 }
 
-/* meadia*/
+
+/* =====================
+   MEDIA QUERIES
+===================== */
 
 @media (max-width: 900px) {
+  header {
+    padding: 30px 10px;
+  }
 
-header {
-  padding: 30px 10px;
-}
-header h1 {
-font-size: 48px;
-}
-header h3 {
-font-size: 20px;
-}
-header h5 {
-font-size: 12px;
-}
-.button {
-font-size: 12px;
-}
+  header h1 {
+    font-size: 48px;
+  }
 
-.container{ 
-margin: 50px;}
+  header h3 {
+    font-size: 20px;
+  }
 
-.section-1 {
-  grid-template-columns: 1fr;
-  gap: 32px;  }
+  header h5 {
+    font-size: 12px;
+  }
 
-.section-1-img {
- width: 100%;
- height:200px;
- }
+  .button {
+    font-size: 12px;
+  }
 
-main h3 {
-font-size: 14px;
- }
+  .container {
+    margin: 50px;
+  }
 
-main h2 {
-font-size: 20px;
- }
-main p {
-font-size: 12px;
-}
+  .section-1 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-.row-2 {
-  grid-template-columns: 1fr;
-  gap: 32px;  }
+  .section-1-img {
+    height: 200px;
+  }
 
+  main h3 {
+    font-size: 14px;
+  }
 
-.footer-main-row {
-  display: grid;
-  grid-template-rows: 1fr ;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-  padding: 10px; 
- }
+  main h2 {
+    font-size: 20px;
+  }
 
- .section-2 .media-row {
-  flex-direction: column;
-}
+  main p {
+    font-size: 12px;
+  }
 
-.section-2 .media-row img,
-.section-2 .media-row iframe {
-  width: 100%;
-}
+  .row-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
+  .footer-main-row {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
 
+  .section-2 .media-row {
+    flex-direction: column;
+  }
+
+  .section-2 .media-row img,
+  .section-2 .media-row iframe {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1100px) {
   header {
-    min-height: 80vh;             
-    background-position: center 70%; 
+    min-height: 80vh;
+    background-position: center 70%;
   }
 }
